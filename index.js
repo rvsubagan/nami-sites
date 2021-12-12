@@ -8,7 +8,7 @@ import dotenv from 'dotenv'
 const app = express()
 dotenv.config()
 
-app.use(bodParser.json())
+app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(cors())
 
