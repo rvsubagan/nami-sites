@@ -4,6 +4,7 @@ import mongoose from 'mongoose'
 import cors from 'cors'
 import dotenv from 'dotenv'
 
+import sitesRoutes from './routes/sites.js'
 
 const app = express()
 dotenv.config()
@@ -11,6 +12,8 @@ dotenv.config()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(cors())
+
+app.use('/sites', sitesRoutes)
 
 const PORT = process.env.PORT || 5000
 
